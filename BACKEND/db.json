@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": "1371",
+      "username": "blessingf",
+      "password": "09@FB"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "7678",
+      "title": "DUMPDUSTING",
+      "description": "USE OF SOAPY WATER",
+      "dueDate": "2025-12-01T09:00",
+      "completed": true,
+      "userId": "1371"
+    },
+    {
+      "id": "df5c",
+      "title": "TEMPERATURE LOGGING",
+      "description": "NOTED THE EARLY MORNING TEMPERATURE",
+      "dueDate": "2025-12-01T07:00",
+      "completed": false,
+      "userId": "1371"
+    }
+  ]
+}

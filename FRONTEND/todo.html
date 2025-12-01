@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Daily Lab Task Manager — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+  <body class="dashboard-page">
+
+    <div class="dashboard">
+
+
+      <div class="top-bar">
+        <button class="logout-btn" onclick="logout()">Logout</button>
+        <h2>Daily Lab Task Manager</h2>
+        <div id="welcomeText" class="username"></div>
+      </div>
+
+
+      <div class="task-box">
+        <h3>Add New Task</h3>
+        <input id="title" placeholder="Task title">
+        <input id="description" placeholder="Description">
+        <input id="dueDate" type="datetime-local">
+        <button class="add-btn" onclick="addTask()">Add Task</button>
+      </div>
+
+      <div class="filters">
+        <button onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('pending')">Pending</button>
+        <button onclick="filterTasks('completed')">Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+
+
+    <div id="editModal" class="modal hidden">
+      <div class="modal-box">
+        <h3>Edit Task</h3>
+        <input id="editTitle" placeholder="Title">
+        <input id="editDescription" placeholder="Description">
+        <input id="editDue" type="datetime-local">
+        <div style="display:flex;gap:8px;margin-top:12px;">
+          <button class="edit-btn" onclick="saveEdit()">Save</button>
+          <button onclick="closeModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+
+</html>
