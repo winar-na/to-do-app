@@ -99,7 +99,8 @@ body.dashboard-page {
 
 .dashboard {
   width: max-content;
-  margin: 40px auto;
+  margin: auto;
+  height:auto;
   background:purple;
   padding: 28px;
   border-radius: 14px;
