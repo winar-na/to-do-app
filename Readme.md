@@ -1,43 +1,79 @@
-# A daiily Lab Task Manager
-A simple  to-do  application to manage lab tasks efficiently. Users sign up, log in, and manage tasks with ease.
+# Daily Lab Task Manager
+
+A simple to-do application to manage lab tasks efficiently. Users can sign up, log in, and manage tasks with ease.
+
+---
 
 ## Table of Contents
-# Features
-# Project Structure
-# Installation
-# Usage
-# Technologies
-# License
 
-# Features
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies-Used](#technologies-used)
+- [License](#license)
+
+---
+
+## Features
+
 - User Authentication (Sign up / Login)
-- Add, Edit, and Delete tasks
+- Add, Edit, Complete, and Delete tasks
 - View all tasks in a task list
-- Responsive frontend for easy navigation
-- Backend API for task management
+- Responsive and simple frontend UI
+- Backend API powered by JSON Server
+
+---
 
 ## Project Structure
 
-Lab Task Manager/PROCT/DAILY LAB TASKS
+Daily Lab Task Manager/
 │
-├─ frontend/ --> Contains HTML, CSS, JS 
-├─ backend/ --> Contains db.json and configuration for JSON Server
+├─ frontend/ --> HTML, CSS, JavaScript (client-side code)
+├─ backend/ --> db.json and JSON Server configuration
 └─ README.md --> Project documentation
 
+
+---
+
 ## Installation
--- Backend 
+
+### 1. Start the Backend (JSON Server)
+
+Open the  terminal:
+
+```bash
 cd backend
 npm install -g json-server
 json-server --watch db.json --port 3001
 
-## Usage
-Open the frontend in my browser.
-Sign up  if no account available then  log in with my account.
-Add new tasks by filling in task details.
-complete, Edit or delete tasks as needed.
+Json server will run at:
+http://localhost:3001
 
-## Technologies Used
+open the frontend
+cd frontend
+open index.html
+
+Usage
+
+Open the frontend in the browser.
+
+Sign up if  don’t have an account, then log in.
+
+Add new tasks by filling in the task form.
+
+Complete, edit, or delete tasks when needed.
+
+All task data is saved through JSON Server.
+
+Technologies Used
+
 Frontend: HTML, CSS, JavaScript
-Backend: JSON Server
+
+Backend: JSON Server (Fake REST API)
+
 Version Control: Git & GitHub
 
+License
+
+This project is open-source under the MIT License.
