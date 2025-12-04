@@ -8,57 +8,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="auth-page">
+<body>
+  <div class="auth-card">
+    <!-- Header -->
+    <h1 class="brand">Task Manager</h1>
 
-  <div class="auth-wrapper">
-    <div class="auth-card">
+    <!-- LOGIN -->
+    <div id="loginBox" class="auth-form">
+      <h2>Login</h2>
 
-      <!-- Header -->
-      <h1 class="brand">Daily Lab Task Manager</h1>
+      <label for="login-username">Username</label>
+      <input id="login-username" type="text" placeholder="Username">
 
-      <!-- LOGIN -->
-      <div id="loginBox" class="auth-form">
-        <h2>Login</h2>
-
-        <label for="login-username">Username</label>
-        <input id="login-username" type="text" placeholder="Username">
-
-        <label for="login-password">Password</label>
-        <div class="pw-row">
-          <input id="login-password" type="password" placeholder="Password">
-          <button class="small" onclick="togglePassword('login-password')">Show</button>
-        </div>
-
-        <button class="auth-btn" onclick="loginUser()">Login</button>
-
-        <p class="muted">Don't have an account?
-          <a href="#" onclick="showSignup(); return false;">Create account</a>
-        </p>
+      <label for="login-password">Password</label>
+      <div class="pw-row">
+        <input id="login-password" type="password" placeholder="Password">
+        <button class="small" onclick="togglePassword('login-password')">Show</button>
       </div>
 
-      <!-- SIGNUP -->
-      <div id="signupBox" class="auth-form hidden">
-        <h2>Create Account</h2>
+      <button class="auth-btn" onclick="loginUser()">Login</button>
 
-        <label for="signup-username">Username</label>
-        <input id="signup-username" type="text" placeholder="Username">
-
-        <label for="signup-password">Password</label>
-        <div class="pw-row">
-          <input id="signup-password" type="password" placeholder="Password">
-          <button class="small" onclick="togglePassword('signup-password')">Show</button>
-        </div>
-
-        <button class="auth-btn" onclick="signupUser()">Signup</button>
-
-        <p class="muted">Already have an account?
-          <a href="#" onclick="showLogin(); return false;">Login</a>
-        </p>
-      </div>
-
+      <p class="muted">Don't have an account?
+        <a href="#" onclick="showSignup(); return false;">Create account</a>
+      </p>
     </div>
   </div>
+  <!-- SIGNUP -->
+  <div id="signupBox" class="auth-form hidden">
+    <h2>Create Account</h2>
 
+    <label for="signup-username">Username</label>
+    <input id="signup-username" type="text" placeholder="Username">
+
+    <label for="signup-password">Password</label>
+    <div class="pw-row">
+      <input id="signup-password" type="password" placeholder="Password">
+      <button class="small" onclick="togglePassword('signup-password')">Show</button>
+    </div>
+
+    <button class="auth-btn" onclick="signupUser()">Signup</button>
+
+    <p class="muted">Already have an account?
+      <a href="#" onclick="showLogin(); return false;">Login</a>
+    </p>
+  </div>
+  </div>
   <script src="script.js"></script>
 </body>
 

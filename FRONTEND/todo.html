@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Daily Lab Task Manager — Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MINI TODO</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="dashboard-page">
+<body>
 
-  <body class="dashboard-page">
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <h2>TODO LIST</h2>
+    <div id="welcomeText" class="username"></div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
 
-    <div class="dashboard">
+  <!-- WRAPPER FOR BOTH SECTIONS -->
+  <div class="wrapper">
 
+    <!-- ADD TASK CARD -->
+    <div class="main-content">
+      <h3>Add New Task</h3>
 
-      <div class="top-bar">
-        <button class="logout-btn" onclick="logout()">Logout</button>
-        <h2>Daily Lab Task Manager</h2>
-        <div id="welcomeText" class="username"></div>
-      </div>
+      <input id="title" placeholder="Task title">
+      <input id="description" placeholder="Description">
+      <input id="dueDate" type="datetime-local">
 
+      <button class="add-btn" onclick="addTask()">Add Task</button>
+    </div>
 
-      <div class="task-box">
-        <h3>Add New Task</h3>
-        <input id="title" placeholder="Task title">
-        <input id="description" placeholder="Description">
-        <input id="dueDate" type="datetime-local">
-        <button class="add-btn" onclick="addTask()">Add Task</button>
-      </div>
+    <!-- FILTERS + TASK LIST -->
+    <div class="aside-bar">
 
+      <!-- FILTER BUTTONS -->
       <div class="filters">
         <button onclick="filterTasks('all')">All</button>
         <button onclick="filterTasks('pending')">Pending</button>
         <button onclick="filterTasks('completed')">Completed</button>
       </div>
 
+      <!-- TASK LIST -->
       <ul id="taskList"></ul>
     </div>
+  </div>
 
+  <!-- EDIT MODAL -->
+  <div id="editModal" class="modal hidden">
+    <div class="modal-box">
+      <h3>Edit Task</h3>
 
-    <div id="editModal" class="modal hidden">
-      <div class="modal-box">
-        <h3>Edit Task</h3>
-        <input id="editTitle" placeholder="Title">
-        <input id="editDescription" placeholder="Description">
-        <input id="editDue" type="datetime-local">
-        <div style="display:flex;gap:8px;margin-top:12px;">
-          <button class="edit-btn" onclick="saveEdit()">Save</button>
-          <button onclick="closeModal()">Cancel</button>
-        </div>
-      </div>
+      <input id="editTitle" placeholder="Title">
+      <input id="editDescription" placeholder="Description">
+      <input id="editDue" type="datetime-local">
+
+      <button class="edit-btn" onclick="saveEdit()">Save</button>
+      <button onclick="closeModal()">Cancel</button>
     </div>
+  </div>
 
-    <script src="todo.js"></script>
-  </body>
+  <script src="todo.js"></script>
+</body>
 
 </html>

@@ -6,14 +6,5 @@
       "password": "09@FB"
     }
   ],
-  "tasks": [
-    {
-      "id": "7678",
-      "title": "DUMPDUSTING",
-      "description": "USE OF SOAPY WATER",
-      "dueDate": "2025-12-01T09:00",
-      "completed": true,
-      "userId": "1371"
-    }
-  ]
+  "tasks": []
 }
